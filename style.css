@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  form {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    border-color: #008000;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .required {
+    color: red;
+    font-size: 12px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: #008000;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    animation: scale 1s ease-in-out;
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Custom error messages */
+  .error.email-error {
+    content: "We need a valid email address to reach you.";
+  }
+
+  .error.password-error {
+    content: "Your password must be at least 8 characters long and contain at least one number and one upper case letter.";
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+</head>
+<body>
+  <h1>Task Management App</h1>
+
+  <input type="text" id="newTask" placeholder="Enter a new task">
+  <button type="button" id="addTask">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    // Get the elements
+    const newTaskInput = document.querySelector('#newTask');
+    const addTaskButton = document.querySelector('#addTask');
+    const taskList = document.querySelector('#taskList');
+
+    // Add an event listener to the add task button
+    addTaskButton.addEventListener('click', function() {
+      // Create a new task element
+      const taskElement = document.createElement('li');
+      taskElement.textContent = newTaskInput.value;
+
+      // Add the task element to the task list
+      taskList.appendChild(taskElement);
+
+      // Clear the new task input
+      newTaskInput.value = '';
+    });
+  </script>
+</body>
+</html>
